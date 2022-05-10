@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #E9E9E9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    grid-area: main;
+}
+main h2{
+        text-align: center;
+        font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
+        text-transform: uppercase;
+        font-size: 40px;
+        color: #006666;
+        text-shadow: 0 8px 9px #48a3a3, 0px -2px 1px #fff;
+        font-weight: bold;
+        letter-spacing: -4px;
+        border-radius: 20px;
+        margin-top: 10px;
+}
+/* ----- Header/Nav -----*/
+header{
+    background: #006666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    padding: 20px;
+}
+header h1{
+    color: #F5F5F5;
+    font-family:'Lobster', cursive;
+    font-size: 75px;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    border: 5px #F5F5F5 solid;
+    border-radius: 15px;
+}
+header nav ul li{
+    margin: 0 30px 0 30px;
+}
+header nav ul li a{
+    color: #F5F5F5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+}
+/* ----- INDEX -----*/
+.portada{
+    background-image: url("../img/imagenprincipal.jpg");
+    width: 100%;
+    height: 50vh;
+}
+.portada .h2Portada{
+    font-family: 'lobster', cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #F5F5F5;
+    text-transform: none;
+    text-shadow: none;
+    font-weight: bold;
+    letter-spacing: -4px;
+    border-radius: 20px;
+    margin-top: 0;
+}
+.portada h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #F5F5F5;
+}
+.destacados{
+    color: #006666;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.destacados div figure img{
+    width: 500px;
+    height: 250px;
+    border: 5px #006666 solid;
+}
+.destacados div{
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+/* ----- PRODUCTOS -----*/
+body .contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr auto 0.3fr ;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+.productos div img{
+    border: 2px #006666 solid;
+    width: 500px;
+    height: 350px;
+    margin-top: 10px ;
+}
+.productos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    height: 800px;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+/*----- CONTACTO -----*/
+.contacto{
+    height: 720px;
+}
+.listaContacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listaContacto form{
+    border: 1px #006666 solid;
+    border-radius: 5px;
+    background: #CCCCCC;
+    margin: 50px 0 50px 0;
+    padding: 20px;
+    height: 500px;
+    width: 700px;
+}
+input{
+    height: 1cm;
+    width: 5cm;
+    margin: 20px;
+    border-radius: 5px;
+}
+textarea{
+    width: 650px;
+    margin: 0 20px 0 20px;
+}
+.enviar{
+    color: #fff;
+    background: #006666;
+    float: right;
+    border-radius: 5px;
+}
+/* ----- NOSOTROS -----*/
+.nosotros{
+    height: 720px;
+}
+.nosotros div{
+    text-align: center;
+    margin-top: 70px;
+    font-size: 20px;
+}
+/* ----- Servicio ----- */
+.servicio{
+    height: 720px;
+    text-align: center;
+}
+.servicio div h3{
+        font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #006666;
+        text-shadow: 0 8px 9px #48a3a3, 0px -2px 1px #fff;
+        font-weight: bold;
+        letter-spacing: 4px;
+        border-radius: 20px;
+        margin-top: 10px;
+        padding: 50px;
+}
+/* ----- Footer ----- */
+footer{
+    background: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: footer;
+    padding: 5px;
+}
+
+/* ***** Media Querie ***** */
+@media screen and (max-width: 1600px){
+    .destacados{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header h1{
+        margin-left: 0;
+    }
+    nav ul{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        height: auto;
+    }
+}
+@media screen and (max-width: 1030px){
+    .destacados{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    nav ul li{
+        margin: 0 5px 0 5px;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        height: auto;
+    }
+    .listaContacto form{
+        height: 500px;
+        width: 600px;
+    }
+    textarea{
+        width: 550px;
+        margin: 0 20px 0 20px;
+    }
+}
+@media screen and (max-width: 806px){
+    .listaContacto form{
+        height: 550px;
+        width: 400px;
+    }
+    textarea{
+        width: 350px;
+        margin: 0 20px 0 20px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column
+    }
+    .contacto{
+        height: 800px;
+    }
+} 
