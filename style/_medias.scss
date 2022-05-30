@@ -1,0 +1,66 @@
+/* ***** Media Querie ***** */
+@media screen and (max-width: 1600px){
+    .destacados{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header h1{
+        margin-left: 0;
+    }
+    nav ul{
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        height: auto;
+    }
+}
+@media screen and (max-width: 1030px){
+    .destacados{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+    nav ul li{
+        margin: 0 5px 0 5px;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        height: auto;
+    }
+    .listaContacto form{
+        height: 500px;
+        width: 600px;
+    }
+    textarea{
+        width: 550px;
+        margin: 0 20px 0 20px;
+    }
+}
+@media screen and (max-width: 806px){
+    .listaContacto form{
+        height: 550px;
+        width: 400px;
+    }
+    textarea{
+        width: 350px;
+        margin: 0 20px 0 20px;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column
+    }
+    .contacto{
+        height: 800px;
+    }
+} 

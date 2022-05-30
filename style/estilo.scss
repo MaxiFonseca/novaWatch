@@ -1,0 +1,110 @@
+@import"variables";
+@import"principales";
+@import"medias";
+/* ----- INDEX -----*/
+.portada img{
+    height: 75vh;
+}
+.destacados{
+    color: #006666;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    div{
+        text-align: center;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+        flex-direction: column;
+        figure{
+            img{
+                width: 500px;
+                height: 250px;
+                border: 5px #006666 solid;
+                border-radius: 5px;
+        }
+    }
+}
+}
+.destacados div:hover{
+    transform: scale(1.05);
+    transition-duration: 2s;
+    transition-property: all;
+}
+/* ----- PRODUCTOS -----*/
+body .contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr auto 0.3fr ;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+.productos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    height: 800px;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    div{
+        img{
+            border: 2px #006666 solid;
+            width: 500px;
+            height: 350px;
+            margin-top: 10px ;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px #48a3a3, 0px -2px 1px rgb(7, 6, 6);
+        }
+    }
+}
+/*----- CONTACTO -----*/
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button{
+        background: #48a3a3;
+      }  
+}
+.forms{
+    border: 1px #006666 solid;
+    border-radius: 5px;
+    padding: 15px;
+    width: 700px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+/* ----- NOSOTROS -----*/
+.nosotros{
+    height: 720px;
+    div{
+        text-align: center;
+        margin-top: 70px;
+        font-size: 20px;
+    }
+}
+/* ----- Servicio ----- */
+.servicio{
+    height: 720px;
+    text-align: center;
+    div{
+        h3{
+            font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
+            text-transform: uppercase;
+            font-size: 30px;
+            color: #006666;
+            text-shadow: 0 8px 9px #48a3a3, 0px -2px 1px #fff;
+            font-weight: bold;
+            letter-spacing: 4px;
+            border-radius: 20px;
+            margin-top: 10px;
+            padding: 50px;
+    }
+    }
+}
