@@ -1,16 +1,22 @@
-@import"variables";
-@import"principales";
-@import"medias";
 /* ----- INDEX -----*/
-.portada img{
-    height: 75vh;
+.portada{
+    img{
+        height: 75vh;
+    }
+    h3{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        color: $secundary4;
+    }
 }
 .destacados{
-    color: #006666;
+    color: $primary;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-template-rows: auto auto;
     gap: 10px;
+    justify-content: space-around;
     div{
         text-align: center;
         margin-top: 30px;
@@ -18,20 +24,19 @@
         justify-content: space-around;
         margin-bottom: 50px;
         flex-direction: column;
-        figure{
-            img{
-                width: 500px;
-                height: 250px;
-                border: 5px #006666 solid;
-                border-radius: 5px;
+        &:hover{
+            transform: scale(1.05);
+            transition-duration: 2s;
+            transition-property: all;
         }
     }
-}
-}
-.destacados div:hover{
-    transform: scale(1.05);
-    transition-duration: 2s;
-    transition-property: all;
+    figure{
+        img{
+            @include sizes (500px,350px);
+            border: 5px $primary solid;
+            border-radius: 5px;
+        }
+    }
 }
 /* ----- PRODUCTOS -----*/
 body .contenedor{
@@ -43,6 +48,13 @@ body .contenedor{
     "main main main"
     "footer footer footer";
 }
+.productos div img{
+    border: 2px #006666 solid;
+    @include sizes (500px,350px);
+    margin-top: 10px ;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px #48a3a3, 0px -2px 1px rgb(7, 6, 6);
+}
 .productos{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -52,16 +64,6 @@ body .contenedor{
     gap: 10px;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    div{
-        img{
-            border: 2px #006666 solid;
-            width: 500px;
-            height: 350px;
-            margin-top: 10px ;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px #48a3a3, 0px -2px 1px rgb(7, 6, 6);
-        }
-    }
 }
 /*----- CONTACTO -----*/
 .contacto{
@@ -70,7 +72,7 @@ body .contenedor{
     align-items: center;
     button{
         background: #48a3a3;
-      }  
+    }
 }
 .forms{
     border: 1px #006666 solid;
@@ -95,16 +97,12 @@ body .contenedor{
     text-align: center;
     div{
         h3{
-            font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
-            text-transform: uppercase;
+            @extend %text-shadow;
             font-size: 30px;
-            color: #006666;
-            text-shadow: 0 8px 9px #48a3a3, 0px -2px 1px #fff;
-            font-weight: bold;
             letter-spacing: 4px;
             border-radius: 20px;
             margin-top: 10px;
             padding: 50px;
-    }
+        }
     }
 }

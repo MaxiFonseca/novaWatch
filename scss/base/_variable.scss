@@ -1,0 +1,31 @@
+$primary: #006666;
+$secundary: #008584;
+$secundary2: #CCCCCC;
+$secundary3: #E9E9E9;
+$secundary4: #F5F5F5;
+
+/* ******** Mapa *********** */
+$redes:(
+    instagram: 20px,
+    facebook: 30px,
+    youtube: 40px,
+);
+@each $class, $variable in $redes{
+    .red-#{$class}{
+        margin-left: $variable;
+    }
+};
+/* ****** Mixin ****** */
+@mixin sizes ($width, $height){
+    width: $width;
+    height: $height;
+}
+/* ***** Extend ***** */
+%text-shadow {
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    text-transform: uppercase;
+    color: $primary;
+    text-shadow: 0 8px 9px #48a3a3, 0px -2px 1px #fff;
+    font-weight: bold;
+}

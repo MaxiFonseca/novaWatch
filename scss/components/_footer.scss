@@ -1,0 +1,9 @@
+/* ----- Footer ----- */
+footer{
+    background: $secundary2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: footer;
+    padding: 5px;
+}
