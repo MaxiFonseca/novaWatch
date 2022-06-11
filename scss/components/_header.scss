@@ -25,9 +25,16 @@ header{
         }
     }
     h1{
-        color: $secundary4;
-        font-family:'Lobster', cursive;
-        font-size: 75px;
+        a{
+            color: $secundary4;
+            font-family:'Lobster', cursive;
+            font-size: 75px;
+            text-decoration: none;
+            margin-left: 30px;
+            &:hover{
+                color: $secundary4;
+            }
+        }
     }
 }
 .nav-link{

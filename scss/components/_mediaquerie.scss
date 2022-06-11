@@ -1,10 +1,5 @@
 /* ***** Media Querie ***** */
 @media screen and (max-width: 1600px){
-    .destacados{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-    }
     header{
         display: flex;
         flex-direction: column;
@@ -16,27 +11,10 @@
         margin-right: 0;
         margin-bottom: 20px;
     }
-    .productos{
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto auto;
-        height: auto;
-    }
 }
 @media screen and (max-width: 1030px){
-    .destacados{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
     nav ul li{
         margin: 0 5px 0 5px;
-    }
-    .productos{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        height: auto;
     }
     .listaContacto form{
         height: 500px;
@@ -45,6 +23,11 @@
     textarea{
         width: 550px;
         margin: 0 20px 0 20px;
+    }
+    .portada{
+        img{
+            max-height: 30vh;
+        }
     }
 }
 @media screen and (max-width: 806px){
@@ -56,11 +39,27 @@
         width: 350px;
         margin: 0 20px 0 20px;
     }
-    nav ul{
-        display: flex;
-        flex-direction: column
+    .justify-content-end{
+        margin-right: 0px;
+    }
+    .nav-link{
+        padding: 8px 5px 8px 5px;
+        font-size: medium;
     }
     .contacto{
         height: 800px;
     }
 } 
+@media screen and (max-width: 600px){
+    .portada{
+        img{
+            max-height: 20vh;
+        }
+    }
+    footer{
+        flex-wrap: wrap;
+        div{
+            margin: 5px 0 10px 0;
+        }
+    }
+}

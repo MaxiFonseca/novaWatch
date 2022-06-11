@@ -25,14 +25,6 @@ main h2, .servicio div h3 {
 
 /* ***** Media Querie ***** */
 @media screen and (max-width: 1600px) {
-  .destacados {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-  }
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -49,37 +41,11 @@ main h2, .servicio div h3 {
     margin-right: 0;
     margin-bottom: 20px;
   }
-  .productos {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-    height: auto;
-  }
 }
 
 @media screen and (max-width: 1030px) {
-  .destacados {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto auto auto;
-        grid-template-rows: auto auto auto;
-  }
   nav ul li {
     margin: 0 5px 0 5px;
-  }
-  .productos {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    -ms-grid-rows: auto auto auto auto;
-        grid-template-rows: auto auto auto auto;
-    height: auto;
   }
   .listaContacto form {
     height: 500px;
@@ -88,6 +54,9 @@ main h2, .servicio div h3 {
   textarea {
     width: 550px;
     margin: 0 20px 0 20px;
+  }
+  .portada img {
+    max-height: 30vh;
   }
 }
 
@@ -100,17 +69,28 @@ main h2, .servicio div h3 {
     width: 350px;
     margin: 0 20px 0 20px;
   }
-  nav ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .justify-content-end {
+    margin-right: 0px;
+  }
+  .nav-link {
+    padding: 8px 5px 8px 5px;
+    font-size: medium;
   }
   .contacto {
     height: 800px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portada img {
+    max-height: 20vh;
+  }
+  footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer div {
+    margin: 5px 0 10px 0;
   }
 }
 
@@ -125,9 +105,6 @@ body {
 }
 
 main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: main;
 }
 
@@ -150,9 +127,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: header;
   padding: 2px;
 }
@@ -176,10 +150,16 @@ header nav ul li a:hover {
   color: #F5F5F5;
 }
 
-header h1 {
+header h1 a {
   color: #F5F5F5;
   font-family: 'Lobster', cursive;
   font-size: 75px;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+header h1 a:hover {
+  color: #F5F5F5;
 }
 
 .nav-link {
@@ -201,16 +181,13 @@ footer {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: footer;
   padding: 5px;
 }
 
 /* ----- INDEX -----*/
 .portada img {
-  height: 75vh;
+  height: 50vh;
 }
 
 .portada h3 {
@@ -220,87 +197,68 @@ footer {
   color: #F5F5F5;
 }
 
-.destacados {
-  color: #006666;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  gap: 10px;
+.destacados > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
-.destacados div {
+.destacados > div div {
   text-align: center;
-  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 600px;
+}
+
+.destacados > div figure img {
+  width: 500px;
+  height: 350px;
+}
+
+/* ----- PRODUCTOS -----*/
+.productos > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-bottom: 50px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.destacados div:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transition-property: all;
-  transition-property: all;
-}
-
-.destacados figure img {
+.productos > div div img {
   width: 500px;
   height: 350px;
-  border: 5px #006666 solid;
-  border-radius: 5px;
-}
-
-/* ----- PRODUCTOS -----*/
-body .contenedor {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 0.2fr auto 0.3fr;
-      grid-template-rows: 0.2fr auto 0.3fr;
-      grid-template-areas: "header header header" "main main main" "footer footer footer";
-}
-
-.productos div img {
-  border: 2px #006666 solid;
-  width: 500px;
-  height: 350px;
-  margin-top: 10px;
   border-radius: 10px;
-  -webkit-box-shadow: 0 8px 20px #48a3a3, 0px -2px 1px #070606;
-          box-shadow: 0 8px 20px #48a3a3, 0px -2px 1px #070606;
-}
-
-.productos {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 800px;
-  gap: 10px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  box-shadow: 9px 13px 8px -2px rgba(0, 102, 102, 0.97);
+  -webkit-box-shadow: 9px 13px 8px -2px rgba(0, 102, 102, 0.97);
+  -moz-box-shadow: 9px 13px 8px -2px rgba(0, 102, 102, 0.97);
 }
 
 /*----- CONTACTO -----*/
