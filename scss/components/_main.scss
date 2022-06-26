@@ -27,6 +27,16 @@
         flex-direction: column;
         align-items: center;
         height: 600px;
+        a{
+            color: $secundary4;
+            background-color: $primary;
+            border: none;
+            &:hover{
+                opacity: 0.7;
+                background-color: $primary;
+            }
+        }
+
     }
     figure{
         img{
@@ -34,33 +44,55 @@
         }
     }
 }
+
 }
 /* ----- PRODUCTOS -----*/
-.productos >{
+.productos{
     div{
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        margin-bottom: 30px;
         flex-wrap: wrap;
-        div{
-            img{
-                @include sizes (500px,350px);
-                border-radius: 10px;
-                margin-bottom: 30px;
-                box-shadow: 9px 13px 8px -2px rgba(0,102,102,0.97);
-                -webkit-box-shadow: 9px 13px 8px -2px rgba(0,102,102,0.97);
-                -moz-box-shadow: 9px 13px 8px -2px rgba(0,102,102,0.97);
-            }
-        }
+        justify-content: space-around;
+        margin: 30px 40px 50px 40px;
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+            font-family: arial;
+            .price {
+                color: grey;
+                font-size: 22px;
+              }
+              button {
+                border: none;
+                outline: 0;
+                padding: 12px;
+                color: white;
+                background-color: $primary;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+                border-radius: 5px;
+                &:hover {
+                    opacity: 0.7;
+                  }
+              }
+              h2{
+                background-color: transparent;
+              }
+          }
+          
     }
 }
+
 
 /*----- CONTACTO -----*/
 .contacto{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     button{
         background: #48a3a3;
     }
@@ -68,32 +100,82 @@
 .forms{
     border: 1px #006666 solid;
     border-radius: 5px;
-    padding: 15px;
-    width: 700px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    padding: 10px;
+    width: 650px;
+    margin-bottom: 125px;
+    margin-top: 65px;
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+textarea{
+    margin: 0px;
 }
 /* ----- NOSOTROS -----*/
 .nosotros{
-    height: 720px;
+    height: auto;
     div{
-        text-align: center;
-        margin-top: 70px;
-        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            align-items: center;
+            border-radius: 7px;
+            -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+    div{
+        h3{
+            text-align: center;
+            margin-top: 70px;
+            font-size: 25px;
+            align-items: center; 
+            background: $secundary4;
+            border-radius: 5px;
+            margin: 55px 10px 70px 10px;
+            padding: 10px;
+            border-radius: 7px 7px 7px 7px;
+            -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        }
     }
 }
 /* ----- Servicio ----- */
 .servicio{
-    height: 720px;
+    align-items: center;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     div{
+        img{
+            border-radius: 7px;
+            -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+        }
         h3{
+            text-align: center;
             @extend %text-shadow;
             font-size: 30px;
             letter-spacing: 4px;
             border-radius: 20px;
             margin-top: 10px;
             padding: 50px;
+        }
+        p{
+            text-align: center;
+            font-size: 25px;
+            background: $secundary4;
+            border-radius: 7px 7px 7px 7px;
+            -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+            margin-bottom: 100px;
+            padding: 15px;
         }
     }
 }

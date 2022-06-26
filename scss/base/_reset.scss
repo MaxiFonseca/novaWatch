@@ -14,6 +14,6 @@ main h2{
         @extend %text-shadow;
         font-size: 40px;
         letter-spacing: -4px;
-        border-radius: 20px;
-        margin-top: 10px;
+        margin-top: 5px;
+        background-color: $secundary2;
 }

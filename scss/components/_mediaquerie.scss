@@ -1,36 +1,52 @@
 /* ***** Media Querie ***** */
-@media screen and (max-width: 1600px){
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-    header h1{
-        margin-left: 0;
-    }
-    nav ul{
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
-@media screen and (max-width: 1030px){
-    nav ul li{
-        margin: 0 5px 0 5px;
-    }
-    .listaContacto form{
-        height: 500px;
-        width: 600px;
-    }
-    textarea{
-        width: 550px;
-        margin: 0 20px 0 20px;
+@media (max-width: 600px){
+    .nosotros{
+        div{
+            img{
+                @include sizes (350px,300px)
+            }
+        }
+        div{
+            h3{
+                margin: 0;
+                padding: 5px;
+            }
+        }
     }
     .portada{
         img{
-            max-height: 30vh;
+            max-height: 20vh;
+        }
+    }
+    footer{
+        flex-wrap: wrap;
+        div{
+            margin: 5px 0 10px 0;
+        }
+    }
+    .nav-link{
+        padding: 8px 5px 8px 5px;
+        font-size: small;
+    }
+    .forms{
+        padding: 1115px;
+        width: 300px;
+    }
+
+.servicio{
+    div{
+        img{
+            align-items: center;
+            @include sizes (350px,300px)
+        }
+        p{
+
         }
     }
 }
-@media screen and (max-width: 806px){
+}
+@media (max-width: 850px){
+
     .listaContacto form{
         height: 550px;
         width: 400px;
@@ -44,22 +60,37 @@
     }
     .nav-link{
         padding: 8px 5px 8px 5px;
-        font-size: medium;
+        font-size: small;
     }
-    .contacto{
-        height: 800px;
+    .product-img {
+        height: 220px;
+        width: 150px;
     }
-} 
-@media screen and (max-width: 600px){
+}
+@media (max-width: 1030px){
+    nav ul li{
+        margin: 0 5px 0 5px;
+    }
+    .listaContacto form{
+        height: 500px;
+        width: 600px;
+    }
     .portada{
         img{
-            max-height: 20vh;
+            max-height: 30vh;
         }
     }
-    footer{
-        flex-wrap: wrap;
-        div{
-            margin: 5px 0 10px 0;
-        }
+} 
+@media (max-width: 1600px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    header h1{
+        margin-left: 0;
+    }
+    nav ul{
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
